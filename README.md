@@ -24,12 +24,16 @@
 ### 서비스 페이지
 - 메인 페이지
 <img src="./image/LP main.png"> 
+
 - 검색창
 <img src="./image/LP search.png"> 
+
 - 플레이리스트 재생창
 <img src="./image/LP listen.png"> 
+
 - 마이페이지
 <img src="./image/LP mypage.png"> 
+
 - 라이브 스트리밍 창
 <img src="./image/LP livestream.png"> 
 
