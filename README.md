@@ -20,6 +20,7 @@
     a. 라이브 음원 스트리밍을 들으며 라이브 채팅을 통해 나와 같은 감성을 느끼는 사용자간 소통의 장 마련
 ### 비즈니스 모델
 <img src="./image/List Play BM.png">
+
 ### 서비스 페이지
 - 메인 페이지
 <img src="./image/LP main.png">
