@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+}
+
+main {
+    padding-top: 100px;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+}
+
+.center {
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+video {
+    height: 500px;
+}
+
+.center p {
+    color: white;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.hashtag a{
+    color: #cccccc;
+}
+
+.hashtag-box {
+    background-color: #3a3a3a;
+    margin-right: 10px;
+    width: auto;
+    font-size: 80%;
+}
+
+.hashtag {
+    display: flex;
+    list-style: none;
+    margin-left: -30px;
+    margin-top: -17px;
+}
+
+.rightside {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.rightside_list {
+    display: flex;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.rightside_list img {
+    height: 100px;
+    margin-right: 10px; 
+}

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+html {
+    background-color: #000;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    /* width: 100% */
+    left: 0;
+    right: 0;
+}
+
+main {
+    background-color: black;
+    padding-top: 100px;
+}
+
+.navbar {
+    height: 75px;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.navbar_left ul {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.navbar_letter {
+    color: rgb(26, 26, 26);
+}
+
+
+/* 왼쪽 로고랑 글자 3개 */
+.navbar_left {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_left li {
+    padding: 8px 12px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: rgb(31, 31, 31);
+    white-space:nowrap;
+}
+
+/* 링크 잡 요소 삭제  */
+a:visited {
+    text-decoration-line :none;
+}
+
+a:link {
+    text-decoration-line :none;
+}
+
+a:hover {
+    text-decoration-line :none;
+}
+
+a:active {
+    text-decoration-line :none;
+}
+
+/* 로고 */
+.listplay {
+    cursor: pointer;
+    width: 100px;
+}
+
+/* 검색바 */
+.search-box{
+
+    position:absolute;
+    left: 50%;
+    transform: translateX( -50% );
+
+}
+
+.search-txt{
+    background-image: -webkit-linear-gradient(top,#f8f9fa,#f8f9fa);
+    background-color: #f8f9fa;
+    border: 1px solid #cbcbcb;
+    border-radius: 30px;
+    color: #3c4043;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    width: 600px;
+}
+
+/* 메뉴바 오른쪽 요소들 */
+.navbar_right{
+    display: flex;
+    list-style: none;
+    padding-right: 0;
+}
+
+.navbar_right {
+    height: 60px;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar_right img{
+    cursor: pointer;
+    margin-right:25px;
+}
+
+.video {
+    width: 30px;
+    height: 30px;
+    top: 50%;
+}
+
+.live {
+    width: 30px;
+    height: 30px;
+    top: 50%;
+}
+
+.mypage {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #cbcbcb;
+    border-radius: 50%;
+}

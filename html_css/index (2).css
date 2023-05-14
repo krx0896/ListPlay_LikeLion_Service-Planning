@@ -1,0 +1,136 @@
+.recommended-playlist{
+    display: flex;
+    margin: auto;
+    background-color: #3e317d;
+    color: #ffffff;
+    height: 310px;
+    width:900px;
+    padding: 25px;
+    border-radius: 20px;
+    margin-top : 30px;
+}
+
+.recommended-playlist-title{
+    margin-left: 20px;
+    word-break: keep-all;
+    /* position: relative; */
+}
+
+.recommended-playlist h2 {
+    width: 200px;
+}
+
+.first-playlist {
+    margin-right: 80px;
+}
+
+.recommended-playlist-info {
+    margin-bottom: 27px;
+    display: flex;
+}
+
+.recommended-playlist-info article{
+    height: 50px;
+    width: 500px;
+    margin-top: 2px;
+}
+
+.recommended-playlist-info img{
+    height: 50px;
+    margin-right: 25px;
+}
+
+.recommended-playlist-info p{
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.recommended-playlist ul{
+    list-style: none;
+}
+
+body {
+    background-color: #000;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+h1, h3 {
+    color: white;
+    padding-top:20px;
+    padding-left: 20px;
+
+}
+
+.content p {
+    color: white;
+    padding-left: 10px;
+}
+
+.list {
+    display: flex;
+    /* overflow: scroll; */
+    overflow: auto;
+    /* white-space: nowrap;
+    -ms-overflow-style: none; */
+}
+
+.list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.list::-webkit-scrollbar-thumb {
+    background-color: #7b7b7b;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+}
+
+.list::-webkit-scrollbar-track {
+    background-color: rgb(41, 41, 41);
+    box-shadow: inset 0px 0px 2px rgb(0, 0, 0);
+}
+
+.content {
+    margin-right: 20px;
+}
+
+span img {
+    width: 400px;
+    height: 225px;
+}
+
+.hov-anim-box .animated {
+    display: none
+  }
+  
+.hov-anim-box:hover .animated {
+    display: inline
+  }
+  
+.hov-anim-box:hover .static {
+    display: none
+  }
+
+.detail {
+    margin-top: -5px;
+    font-size: 80%;
+    color: #cbcbcb;
+}
+
+.hashtag a{
+    color: #cccccc;
+}
+
+.hashtag-box {
+    background-color: #3a3a3a;
+    margin-right: 10px;
+    width: auto;
+    font-size: 80%;
+}
+
+.hashtag {
+    display: flex;
+    list-style: none;
+    margin-left: -30px;
+    margin-top: -10px;
+}

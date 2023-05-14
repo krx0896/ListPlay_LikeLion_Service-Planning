@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>live</title>
+    <link rel = "stylesheet" href = "top_navbar.css">
+    <link rel="stylesheet" href="live.css">
+    <!-- <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/> -->
+    <script src="https://code.jquery.com/jquery-1.8.3.min.js" integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8=" crossorigin="anonymous"></script>
+
+    <style>
+        .chat_wrap { margin-top:7px; width:400px; height: 490px; padding:5px; font-size:13px; color:white}
+        .chat_wrap .inner{background-color:#1f1f1f; border-radius:5px; padding:10px; overflow-y:scroll;height: 430px;}
+        .chat_wrap .item{margin-top:15px}
+        .chat_wrap .item:first-child{margin-top:0px}
+        .chat_wrap .item .box{display:inline-block; max-width:180px; position:relative}
+        .chat_wrap .item .box::before{content:""; position:absolute; left:-8px; top:9px; border-top:0px solid transparent; border-bottom:8px solid transparent;border-right:8px solid #fff;}
+        .chat_wrap .item .box .msg {background:#fff; border-radius:10px; padding:8px; text-align:left}
+        .chat_wrap .item .box .time {font-size:11px; color:#999; position:absolute; right: -75px; bottom:5px; width:70px}
+        .chat_wrap .item.mymsg{text-align:right}
+        .chat_wrap .item.mymsg .box::before{left:auto; right:-8px; border-left:8px solid #1f1f1f; border-right:0;}
+        .chat_wrap .item.mymsg .box .msg{background:#a7a7a7}
+        .chat_wrap .item.mymsg .box .time{right:auto; left:-75px}
+        .chat_wrap .item .box{transition:all .3s ease-out; margin:0 0 s0 20px;opacity:0}
+        .chat_wrap .item.mymsg .box{transition:all .3s ease-out; margin:0 20px 0 0;}
+        .chat_wrap .item.on .box{margin:0; opacity: 1;}
+
+        .chat input[type="text"]{border:0; width:100%;background:#ddd; border-radius:5px; height:30px; padding-left:5px; box-sizing:border-box; margin-top:5px}
+        .chat input[type="text"]::placeholder{color:#999}
+    </style>
+    <script>
+        $(function(){
+            $(".chat input[type='text']").keypress(function(e){
+                if(e.keyCode == 13 && $(this).val().length){
+                    var _val = $(this).val();
+                    var _class = $(this).attr("class");
+                    $(this).val('');
+                    var _tar = $(".chat_wrap .inner").append('<div class="item '+_class+'"><div class="box"><p class="msg">'+_val+'</p><span class="time">'+currentTime()+'</span></div></div>');
+
+                    var lastItem = $(".chat_wrap .inner").find(".item:last");
+                    setTimeout(function(){
+                        lastItem.addClass("on");
+                    },10);
+
+                    var position = lastItem.position().top + $(".chat_wrap .inner").scrollTop();
+                    console.log(position);
+
+                    $(".chat_wrap .inner").stop().animate({scrollTop:position},500);
+                }
+            });
+
+        });
+        
+        var currentTime = function(){
+            var date = new Date();
+            var hh = date.getHours();
+            var mm = date.getMinutes();
+            var apm = hh >12 ? "오후":"오전";
+            var ct = apm + " "+hh+":"+mm+"";
+            return ct;
+        }
+
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navbar_left">
+                <a href="index.html">
+                    <img src="Logo.png" class="listplay" alt="logo">
+                </a>
+                <li><a class="navbar_letter"  href="search_result.html">오늘의감성</a></li>
+                <li><a class="navbar_letter" href="">보관함</a></li>
+                <li><a class="navbar_letter" href="">인기차트</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" class="search-txt" placeholder="&#xF002;  검색어를 입력하십시오" style="font-family:Arial, FontAwesome">
+            </div>
+            <ul class="navbar_right">
+                <img src="video.png" class="video" alt="리스트만들기" href="">
+                <img src="live.png" class="live" alt="라이브" href="">
+                <a href="mypage.html">
+                    <img src="mypage_1.png" class="mypage" alt="마이페이지" href="">
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <main class="main_detail">
+        <section class="center">
+            <video controls poster="searchlist/인기1.png">
+                    <source src ="video.mp4" type="video/mp4">
+            </video>
+            <p>분위기에 취할 세련된 도시감성</p>
+            <ul class="hashtag">
+                <li class="hashtag-box"><a href="">#도시감성</a></li>
+                <li class="hashtag-box"><a href="">#회색</a></li>
+                <li class="hashtag-box"><a href="">#잔잔한</a></li>
+                <li class="hashtag-box"><a href="">#새벽</a></li>
+                <li class="hashtag-box"><a href="">#세련된</a></li>
+            </ul>
+        </section>
+        <div class="chat_wrap">
+            <div class="inner">
+                
+                <!-- <div class="item">
+                    <div class="box">
+                        <p class="msg">안녕하세요</p>
+                        <span class="time">오전 10:05</span>
+                    </div>
+                </div>
+    
+                <div class="item mymsg">
+                    <div class="box">
+                        <p class="msg">안녕하세요</p>
+                        <span class="time">오전 10:05</span>
+                    </div>
+                </div> -->
+               
+            </div>
+            <div class="chat">
+                <input type="text" class="mymsg" placeholder="내용 입력">
+            </div>
+            <!-- <input type="text" class="yourmsg" placeholder="내용 입력"> -->
+        </div>
+        
+    </main>
+</body>
