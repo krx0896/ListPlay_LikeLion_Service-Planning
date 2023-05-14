@@ -19,19 +19,19 @@
   3. 라이브 스트리밍 기능
     a. 라이브 음원 스트리밍을 들으며 라이브 채팅을 통해 나와 같은 감성을 느끼는 사용자간 소통의 장 마련
 ### 비즈니스 모델
-<img src="./image/List Play BM.png">
+<img src="./image/List Play BM.png"> 
 
 ### 서비스 페이지
 - 메인 페이지
-<img src="./image/LP main.png">
+<img src="./image/LP main.png"> 
 - 검색창
-<img src="./image/LP search.png">
+<img src="./image/LP search.png"> 
 - 플레이리스트 재생창
-<img src="./image/LP listen.png">
+<img src="./image/LP listen.png"> 
 - 마이페이지
-<img src="./image/LP mypage.png">
+<img src="./image/LP mypage.png"> 
 - 라이브 스트리밍 창
-<img src="./image/LP livestream.png">
+<img src="./image/LP livestream.png"> 
 
 ### 🗓️ Date 
 Project term : 2022.05.01 ~ 2022.05.21 </br>
